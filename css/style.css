@@ -1,0 +1,246 @@
+:root {
+  --gold: #74583e;
+  --cgold: #cea300;
+  --nimble: #989ca0;
+  --tumble: #d79c80;
+  --taupe: #af8969;
+  --pink: #fad7d5;
+  --brown: #8b7d6b;
+  --grey: #696969;
+  --shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+body {
+  font-size: 1.2rem;
+  font-family: "Bodoni Moda", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  min-height: 20000px;
+}
+
+.content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/3.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  z-index: -1;
+}
+
+.content {
+  position: relative;
+  min-height: 100vh;
+  font-family: "Bodoni Moda", serif;
+  color: var(--cgold);
+}
+
+.content h1,
+.content h5,
+.content p {
+  text-shadow: var(--shadow);
+}
+
+.content h1 {
+  font-family: "Great Vibes", cursive;
+  font-size: 6rem;
+  letter-spacing: 2px;
+  color: rgb(202, 140, 25);
+  text-shadow: var(--shadow);
+}
+
+.content h5 {
+  font-size: 3rem;
+  color: rgb(202, 140, 25);
+}
+
+.content p {
+  font-size: 2rem;
+  color: rgb(202, 140, 25);
+}
+
+.content a {
+  color: white;
+  background-color: var(--taupe);
+}
+
+.content a:hover {
+  color: var(--taupe);
+  background-color: white;
+}
+
+/* Navbar */
+.myNavbar {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.myNavbar .offcanvas {
+  height: 100vh;
+}
+
+.myNavbar,
+.offcanvas-title {
+  font-family: "Bodoni Moda", serif;
+}
+
+.myNavbar .nav-link {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.home {
+  background-image: url("../assets/8.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 100vh;
+  margin-top: -6rem;
+  padding-top: 15rem;
+  padding-bottom: 5rem;
+}
+
+.home h1 {
+  /* color: white; */
+  font-family: "Bodoni Moda", serif;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: -2rem;
+}
+
+.home h2 {
+  font-size: 1.5rem;
+  color: var(--pink);
+  margin-bottom: 1rem;
+}
+
+.home p {
+  font-size: 1.1rem;
+  /* color: white; */
+}
+
+.home .couple {
+  margin-top: 100px;
+}
+
+.home .couple h3 {
+  font-family: "Bodoni Moda", serif;
+  font-size: 2.4rem;
+  color: var(--cgold);
+}
+
+.home .couple img {
+  width: 100%;
+}
+
+.info {
+  background-color: var(--grey);
+  color: white;
+  padding-top: 10rem;
+  padding-bottom: 8rem;
+}
+
+.info h2 {
+  color: var(--pink);
+  font-family: "Bodoni Moda", serif;
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.info .address {
+  font-size: 1.1rem;
+}
+
+.info .description {
+  font-size: 1rem;
+}
+
+.info .card {
+  border: 1px solid black;
+}
+
+.info .card-header {
+  border-bottom: 1px solid black;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.info .card-body {
+  font-size: 1rem;
+}
+
+.info .card-footer {
+  border-top: 1px solid black;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Audio */
+.audio-icon-wrapper {
+  width: 4rem;
+  height: 4rem;
+  font-size: 4rem;
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2rem;
+  cursor: pointer;
+  opacity: 0.5;
+  mix-blend-mode: difference;
+  animation: rotating 4s linear infinite;
+  transform-origin: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+  display: none;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Media Query */
+/* Desktop */
+@media screen and(min-width: 1024px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  html {
+    font-size: 65%;
+  }
+  .simply-countdown > .simply-section {
+    padding: 60%;
+    margin: 5px;
+  }
+  .myNavbar .nav-link {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+/* Phone */
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+  html {
+    font-size: 40%;
+  }
+  .content h1 {
+    font-size: 4rem;
+  }
+  .sticky-top {
+    overflow: hidden;
+  }
+}
